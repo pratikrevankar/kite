@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gazab Chaiwala</title>
+    <link rel="stylesheet" href="responsive_style.css">
+    <!-- <link rel="icon" href="favicon.png"> -->
+    <link rel="shortcut icon" type="image/png" href="images\favicon.png" />
+
+    <style>
+        #white-background {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: #fefefe;
+            opacity: 0.7;
+            z-index: 9999;
+        }
+
+        #dlgbox {
+            /*initially dialog box is hidden*/
+            display: none;
+            position: fixed;
+            width: 480px;
+            z-index: 9999;
+            /* border-radius: 10px; */
+            background-color: #7c7d7e;
+        }
+
+        #dlg-header {
+            background-color: #017143;
+            color: white;
+            font-size: 22px;
+            padding: 10px;
+            margin: 10px 10px 0px 10px;
+        }
+
+        #dlg-body {
+            background-color: white;
+            color: black;
+            font-size: 18px;
+            padding: 10px;
+            margin: 0px 10px 0px 10px;
+        }
+
+        #dlg-footer {
+            background-color: #f2f2f2;
+            text-align: right;
+            padding: 10px;
+            margin: 0px 10px 10px 10px;
+        }
+
+        #dlg-footer button {
+            background-color: #017143;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            border: 0px;
+        }
+
+        @media (max-width:991px) {
+            #dlgbox {
+                /*initially dialog box is hidden*/
+                display: none;
+                position: fixed;
+                width: 480px;
+                z-index: 9999;
+                /* border-radius: 10px; */
+                background-color: #7c7d7e;
+                text-align: center;
+            }
+
+            #dlg-header {
+                background-color: #017143;
+                color: white;
+                font-size: 16px;
+                padding: 10px;
+                margin: 10px 10px 0px 10px;
+            }
+
+            #dlg-body {
+                background-color: white;
+                color: black;
+                font-size: 12px;
+                padding: 10px;
+                margin: 0px 10px 0px 10px;
+            }
+
+            #dlg-footer {
+                background-color: #f2f2f2;
+                text-align: right;
+                padding: 8px;
+                margin: 0px 10px 10px 10px;
+
+            }
+
+            #dlg-footer button {
+                background-color: #017143;
+                color: white;
+                width: 50%;
+                margin-left: 25%;
+                margin-right: 25%;
+                padding: 5px;
+                border: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="white-background">
+    </div>
+    <div id="dlgbox">
+        <div id="dlg-header">For Suggestion/Event/Franchise</div>
+        <div id="dlg-body">Call/WhatsApp us at +916381513761</div>
+        <div id="dlg-body">Or Email us at gazabchaiwala@gmail.com</div>
+        <div id="dlg-footer">
+            <button onclick="dlgLogin()">Close</button>
+        </div>
+    </div>
+
+    <section class="sec">
+        <header>
+            <a href="#">
+                <img draggable="false" src="images\logo.png" class="logo">
+            </a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <!-- <li> <a href="#">Home</a> </li>
+                <li> <a href="#">Products</a> </li>
+                <li> <a href="#">What's New</a> </li>
+                <li> <a href="#">Newsletter</a> </li>
+                <li> <a href="#">Contact</a> </li> -->
+                <li> <a href="#" onclick="showDialog()">Events</a> </li>
+                <li> <a href="#" onclick="showDialog()">Franchise</a> </li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Not Just a Cup,<br>It's<span> #GAZAB</span></h2>
+                <p>We know the value a cup of Tea plays in your life. So, here is Gazab Chaiwala to deliver only the
+                    best of Tea for
+                    you</p>
+                <a href="#" onclick="showDialog()">Contact Us</a>
+            </div>
+            <div class="imgBox">
+                <img draggable="false" src="images\pepsi001.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li> <img draggable="false" src="images\pepsi001.png"
+                    onclick="imgSlider('images/pepsi001.png'); changeBgColor('white')">
+            </li>
+            <li> <img draggable="false" src="images\pepsi002.png"
+                    onclick="imgSlider('images/pepsi002.png'); changeBgColor('#dd6c37')">
+            </li>
+            <!-- <li> <img src="images\pepsi003.png" onclick="imgSlider('images/pepsi003.png'); changeBgColor('#1e1e1e')">
+            </li> -->
+        </ul>
+        <ul class="sci">
+            <li> <a href="https://www.facebook.com/gazabchaiwala" target="_blank"> <img draggable="false"
+                        src="images\facebook.png"> </a> </li>
+            <!-- <li> <a href="#"> <img draggable="false" src="images\koo.png"> </a> </li> -->
+            <li> <a href="https://www.instagram.com/gazabchaiwala/" target="_blank"> <img draggable="false"
+                        src="images\instagram.png">
+                </a> </li>
+            <li> <a href="https://www.linkedin.com/in/gazabchaiwala/" target="_blank"> <img draggable="false"
+                        src="images\linkedin.png"> </a> </li>
+            <li> <a href="https://twitter.com/GazabChaiwala" target="_blank"> <img draggable="false"
+                        src="images\twitter.png"> </a> </li>
+
+        </ul>
+
+    </section>
+    <footer>
+        <p class="footer__copy">&#169; 2022 Gazab Chaiwala</p>
+    </footer>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        function dlgLogin() {
+            var whitebg = document.getElementById("white-background");
+            var dlg = document.getElementById("dlgbox");
+            whitebg.style.display = "none";
+            dlg.style.display = "none";
+        }
+
+        function showDialog() {
+            var whitebg = document.getElementById("white-background");
+            var dlg = document.getElementById("dlgbox");
+            whitebg.style.display = "block";
+            dlg.style.display = "block";
+
+            var winWidth = window.innerWidth;
+            var winHeight = window.innerHeight;
+
+            dlg.style.left = (winWidth / 2) - 480 / 2 + "px";
+            dlg.style.top = "150px";
+        }
+
+    </script>
+
+</body>
+
+
+</html>
